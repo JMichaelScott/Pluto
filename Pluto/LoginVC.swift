@@ -17,6 +17,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     
     // Buttons
     @IBOutlet weak var goButton: Button!
+    @IBOutlet weak var facebookButton: UIButton!
     
     // Constraints
     @IBOutlet weak var titleTopConstraint: NSLayoutConstraint!
@@ -64,6 +65,10 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         
         dismissKeyboard()
         logIn()
+    }
+    
+    @IBAction func facebookLoginButtonAction(_ sender: AnyObject) {
+        //look up code in firebase docs	
     }
     
     // MARK: - Firebase

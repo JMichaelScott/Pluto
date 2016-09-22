@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -81,15 +81,27 @@
                                     <action selector="goButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ujj-Qc-UuH"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZr-EP-kdf">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="K84-CJ-LXc"/>
+                                    <constraint firstAttribute="height" constant="50" id="XEA-Cz-MZ8"/>
+                                </constraints>
+                                <state key="normal" image="facebookIcon"/>
+                                <connections>
+                                    <action selector="facebookLoginButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Ru-dd-a3P"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ehX-4j-z5R" secondAttribute="bottom" id="0Bv-eQ-QUW"/>
+                            <constraint firstItem="ZZr-EP-kdf" firstAttribute="top" secondItem="Cbu-mg-waj" secondAttribute="bottom" constant="109" id="1xK-yd-Ohv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9Mp-dD-rsT" secondAttribute="trailing" constant="31" id="5pl-aj-GFe"/>
                             <constraint firstItem="4kr-Lm-sgb" firstAttribute="top" secondItem="9Mp-dD-rsT" secondAttribute="bottom" constant="20" id="9YY-gK-2Xu"/>
                             <constraint firstItem="Cbu-mg-waj" firstAttribute="top" secondItem="4kr-Lm-sgb" secondAttribute="bottom" constant="30" id="DsW-gT-Ig8"/>
                             <constraint firstItem="ehX-4j-z5R" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FcU-d9-oUr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4kr-Lm-sgb" secondAttribute="trailing" constant="31" id="INX-NU-n5S"/>
+                            <constraint firstItem="ZZr-EP-kdf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="34" id="JfH-HM-2BE"/>
                             <constraint firstItem="4kr-Lm-sgb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="31" id="Nmx-F9-mko"/>
                             <constraint firstAttribute="trailing" secondItem="ehX-4j-z5R" secondAttribute="trailing" id="Vas-8N-fCb"/>
                             <constraint firstItem="ehX-4j-z5R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZmL-gB-cVF"/>
@@ -105,6 +117,7 @@
                     <connections>
                         <outlet property="emailField" destination="9Mp-dD-rsT" id="e79-Ra-4CA"/>
                         <outlet property="emailFieldTopConstraint" destination="ePW-dd-VLh" id="rFK-pp-rPK"/>
+                        <outlet property="facebookButton" destination="ZZr-EP-kdf" id="0je-p9-JvD"/>
                         <outlet property="goButton" destination="Cbu-mg-waj" id="31a-QF-uhp"/>
                         <outlet property="goButtonTopConstraint" destination="DsW-gT-Ig8" id="BcX-3k-3XR"/>
                         <outlet property="passwordField" destination="4kr-Lm-sgb" id="q0O-dq-1dV"/>
@@ -217,5 +230,6 @@
     </scenes>
     <resources>
         <image name="background" width="1080" height="1920"/>
+        <image name="facebookIcon" width="300" height="300"/>
     </resources>
 </document>
